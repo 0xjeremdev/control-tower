@@ -1,4 +1,4 @@
-### hey-ctrl-tower
+## hey-ctrl-tower
 
 ## Available Scripts
 
