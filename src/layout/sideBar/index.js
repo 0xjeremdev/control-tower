@@ -63,8 +63,8 @@ const SideItem = styled(Menu.Item)`
   }
 `;
 
-export const SideBarItem = ({ active, children }) => (
-  <SideItem className={active ? "active-item" : ""}>
+export const SideBarItem = ({ active, children, ...other }) => (
+  <SideItem className={active ? "active-item" : ""} {...other}>
     <FlexInline>{children}</FlexInline>
   </SideItem>
 );

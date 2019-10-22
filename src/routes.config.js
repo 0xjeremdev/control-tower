@@ -11,7 +11,52 @@ export const routes = [
     Component: MainLayout,
     routes: [
       {
+        path: "dashboard",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
+        path: "/setting",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
+        path: "/user",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
         path: "/delivery",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
+        path: "/api",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
+        path: "/prompt",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
+        path: "/notification",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
+        path: "/message-personal",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
+        path: "/playerId",
+        exact: true,
+        Component: DeliveryPage
+      },
+      {
+        path: "/behavior",
         exact: true,
         Component: DeliveryPage
       },

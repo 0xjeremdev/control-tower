@@ -38,6 +38,11 @@ class MainLayout extends Component {
   componentDidMount() {
     window.addEventListener("resize", this.updateWidth);
     this.updateWidth();
+    // const { match, location } = this.props;
+    // // console.log(match, location);
+    // var pathArr = location.pathname.split("/");
+    // var name = pathArr[pathArr.length - 1];
+    // this.setState({ activeItem: name });
   }
 
   componentWillUnmount() {
@@ -48,15 +53,15 @@ class MainLayout extends Component {
     this.setState({ visibleSideMenu: visible });
   };
 
-  setActiveItem = (e, { name }) => {
+  handleItemClick = (e, { name }) => {
     this.setState({ activeItem: name });
   };
 
   render() {
     const { isMobileSize, visibleSideMenu, activeItem } = this.state;
-    const { routes, match, location } = this.props;
+    const { routes } = this.props;
 
-    console.log(match, location);
+    // console.log(match, location);
     var sign = [
       {
         name: "dashboard",
@@ -121,7 +126,7 @@ class MainLayout extends Component {
                   key={i}
                   active={activeItem === item.name}
                   name={item.name}
-                  onClick={this.setActiveItem}
+                  onClick={this.handleItemClick}
                 >
                   <Icon name={item.name} />
                   <SideBarText>{item.content}</SideBarText>
@@ -135,7 +140,7 @@ class MainLayout extends Component {
                   key={i}
                   active={activeItem === item.name}
                   name={item.name}
-                  onClick={this.setActiveItem}
+                  onClick={this.handleItemClick}
                 >
                   <Icon name={item.name} />
                   <SideBarText>{item.content}</SideBarText>
