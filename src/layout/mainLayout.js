@@ -157,7 +157,8 @@ class MainLayout extends Component {
                 height: "100vh",
                 padding: 0,
                 paddingTop: isMobileSize ? "60px" : "70px",
-                backgroundColor: "#F0F3F8"
+                backgroundColor: "#F0F3F8",
+                overflowY: "auto"
               }}
             >
               <Navbar
