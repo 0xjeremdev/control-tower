@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Button, Card } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 
-import { Text, Icon, FlexInline, PageContainer, ColoredCard } from "components";
+import { Text, Icon, FlexInline, PageContainer } from "components";
 
-import { CardSection } from "./components";
+import { CardSection, ChartSection } from "./components";
 const Section = styled.div`
   padding-top: 17px;
   padding-bottom: 17px;
@@ -36,6 +36,9 @@ class DeliveryPage extends Component {
         </Section>
         <Section>
           <CardSection />
+        </Section>
+        <Section>
+          <ChartSection />
         </Section>
       </PageContainer>
     );
