@@ -148,7 +148,7 @@ class MainLayout extends Component {
               ))}
             </SideBarSection>
           </Sidebar>
-          <Sidebar.Pusher dimmed={false}>
+          <Sidebar.Pusher dimmed={isMobileSize && visibleSideMenu}>
             <Segment
               basic
               style={{
@@ -156,7 +156,8 @@ class MainLayout extends Component {
                 border: "none",
                 height: "100vh",
                 padding: 0,
-                paddingTop: isMobileSize ? "60px" : "70px"
+                paddingTop: isMobileSize ? "60px" : "70px",
+                backgroundColor: "#F0F3F8"
               }}
             >
               <Navbar

@@ -85,5 +85,6 @@ export const NavContainer = styled.div`
   display: flex;
   width: 100%;
   /* flex-wrap: wrap; */
+  padding: 0 10px;
   justify-content: space-between;
 `;

@@ -1,40 +1,38 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Segment } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 
-export const PageContainer = styled(Segment)`
-  &.ui.segment {
-    padding-left: 180px;
-    padding-right: 180px;
-    border: none;
-    margin: 0px;
-  }
-
-  @media only screen and (max-width: 1600px) {
-    &.ui.segment {
-      padding-left: 90px;
-      padding-right: 90px;
-    }
-  }
-
-  @media only screen and (max-width: 1200px) {
-    &.ui.segment {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-  }
-`;
+import { Text, Icon, FlexInline, PageContainer } from "components";
 
 const Section = styled.div`
   padding-top: 17px;
   padding-bottom: 17px;
 `;
-
+const IconButton = styled(Button)`
+  &.ui.button {
+    background-color: #e5e7ff;
+    padding: 5px 20px;
+  }
+`;
 class DeliveryPage extends Component {
   render() {
     return (
       <PageContainer>
-        <Section></Section>
+        <Section>
+          <FlexInline style={{ justifyContent: "space-between" }}>
+            <Text fontSize="30px" color="#070F29" fontWeight="600">
+              Realtime Message Data
+            </Text>
+            <IconButton>
+              <FlexInline>
+                <Text fontSize="13px" color="#5361FF">
+                  Options
+                </Text>
+                <Icon name="down-arrow-blue" style={{ marginLeft: "5px" }} />
+              </FlexInline>
+            </IconButton>
+          </FlexInline>
+        </Section>
       </PageContainer>
     );
   }
