@@ -4,7 +4,7 @@ import { Button } from "semantic-ui-react";
 
 import { Text, Icon, FlexInline, PageContainer } from "components";
 
-import { CardSection, ChartSection } from "./components";
+import { CardSection, ChartSection, TabSection } from "./components";
 const Section = styled.div`
   padding-top: 17px;
   padding-bottom: 17px;
@@ -38,6 +38,7 @@ class DeliveryPage extends Component {
           <CardSection />
         </Section>
         <Section>
+          <TabSection />
           <ChartSection />
         </Section>
       </PageContainer>
